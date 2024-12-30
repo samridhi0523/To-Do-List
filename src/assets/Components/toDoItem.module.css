@@ -1,0 +1,16 @@
+.itemList{
+    margin: 30px;
+    background-color: #d3c4e393;
+    border-radius: 10px;
+    color: #00020f;
+    padding: 5px;
+    min-width: 60%;
+    font-size: large;
+    font-weight: 600;
+}
+
+.true{
+    text-decoration: line-through;
+    color: #ef233c !important;
+    background-color: #720714 !important;
+}

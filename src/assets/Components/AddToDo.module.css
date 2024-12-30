@@ -1,0 +1,21 @@
+.inputText{
+  height: 30px ;
+  font-size: large;
+  border:none;
+  padding: 8px;
+  background: transparent;
+  border-bottom: 2px solid #b469b58b;
+  border-radius: 5px;
+  color: #eae1df;
+}
+
+.date{
+ 
+    height: 27px ;
+    font-size: large;
+    border:none;
+    color: rgba(0, 0, 0, 0.708);
+    padding: 8px;
+    border-radius: 5px;
+    background: #c8adc0c1;
+}
