@@ -41,11 +41,11 @@ export default function AddToDo({handleClicks}){
           </div>
           <div className="col-2">
           <button type="button" className="btn btn-success" onClick={handleAddBtn}><MdAlarmAdd /> Add 
-         
+         < <ToastContainer  closeButton={false} theme="dark"/>
           </button>
           </div>
           </div>
-      {/* </div> */}
+  
      </>
     
 } 
