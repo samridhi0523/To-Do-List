@@ -16,7 +16,7 @@ export default function AddToDo({handleClicks}){
   }
 
 
-  const handleAddBtn=()=>{
+  const handleAddBtn=(event)=>{
     if(todoName==''){
       toast.error("Enter some task!");
       return
@@ -25,6 +25,7 @@ export default function AddToDo({handleClicks}){
     toast.error("Enter date!");
     return
    }
+   event.preventDefault()
     handleClicks(todoName,dueDate)
     setDueDate('')
     setToDoname('')
@@ -32,7 +33,7 @@ export default function AddToDo({handleClicks}){
   }
 
      return <>
-      <div className="container text-center row flex align-items-center">
+      <form className="container text-center row flex align-items-center" onSubmit={handleAddBtn}>
           <div className="col-6">
             <input className={styles.inputText} type="text" placeholder="Enter some task" onChange={handleNameChange} value={todoName}/>
           </div>
@@ -40,11 +41,11 @@ export default function AddToDo({handleClicks}){
             <input className={styles.date} type="date" placeholder="Select date" onChange={handleDateChange} value={dueDate}/>
           </div>
           <div className="col-2">
-          <button type="button" className="btn btn-success" onClick={handleAddBtn}><MdAlarmAdd /> Add 
-          <ToastContainer theme="dark" closeButton={false} />
+          <button className="btn btn-success" ><MdAlarmAdd /> Add 
           </button>
+          <ToastContainer theme="dark" />
           </div>
-          </div>
+          </form>
      </>
     
 } 
